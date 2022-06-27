@@ -1,33 +1,32 @@
-const initialBooks = [
-    {
-        id: 1,
-        title: "New Book",
-        author: "Author1"
-    },
-    {
-        id: 2,
-        title: "New Project",
-        author: "Author2"
-    }
-]
+const bookTitle = document.getElementById('bookTilte');
+const bookAuthor = document.getElementById('bookAuthor');
+const btnAdd = document.getElementById('Add');
+const books = [];
 
-console.log(initialBooks);
+btnAdd.onclick = function () {
+  add();
+  displayData();
+};
 
-function displayBooks() {
-    const loadBooks = `
- <ul>
- <li> 
- ${initialBooks[i].title}
- </li>
- </ul>`
-
-
+function add() {
+  const book = {
+    title: bookTitle.value,
+    author: bookAuthor.value,
+  };
+  books.push(book);
+  localStorage.setItem('booksList', JSON.stringify(books));
 }
 
-
-const books = document.getElementById('books')
-
-function addBooks(title, author, id) {
-
-
+function displayData() {
+  let bookList = '';
+  for (var i = 0; i < books.length; i++) {
+    bookList += `<tr>
+    <td>${books[i].title}     
+      </td>
+      <td>
+      ${books[i].author}</td>
+      <td><button onClick="deleteBook(${i})">Remove</button></td>
+     </tr>`;
+  }
+  document.getElementById('tdBody').innerHTML = bookList;
 }
