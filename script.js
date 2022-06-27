@@ -1,7 +1,7 @@
 const bookTitle = document.getElementById('bookTilte');
 const bookAuthor = document.getElementById('bookAuthor');
 const btnAdd = document.getElementById('Add');
-const books = [];
+let books = [];
 
 btnAdd.onclick = function () {
   add();
@@ -14,7 +14,7 @@ function add() {
     author: bookAuthor.value,
   };
   books.push(book);
-  localStorage.setItem('booksList', JSON.stringify(books));
+  localStorage.setItem('bookLists', JSON.stringify(books));
 }
 
 function displayData() {
@@ -29,4 +29,15 @@ function displayData() {
      </tr>`;
   }
   document.getElementById('tdBody').innerHTML = bookList;
+}
+
+if (JSON.parse(localStorage.getItem('bookLists')) != null) {
+  books = JSON.parse(localStorage.getItem('bookLists'));
+  displayData();
+}
+
+function deleteBook(index) {
+  books.splice(index, 1);
+  displayData();
+  localStorage.setItem('bookLists', JSON.stringify(books));
 }
