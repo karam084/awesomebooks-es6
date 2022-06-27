@@ -21,11 +21,11 @@ function displayData() {
   let bookList = '';
   for (var i = 0; i < books.length; i++) {
     bookList += `<tr>
-    <td>${books[i].title}     
+    <td class="title">${books[i].title}     
       </td>
-      <td>
+      <td class="author">
       ${books[i].author}</td>
-      <td><button onClick="deleteBook(${i})">Remove</button></td>
+      <td class="reomve"><button onClick="deleteBook(${i})">Remove</button></td>
      </tr>`;
   }
   document.getElementById('tdBody').innerHTML = bookList;
