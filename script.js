@@ -7,13 +7,13 @@ let books = [];
 function displayData() {
   let bookList = '';
   for (let i = 0; i < books.length; i += 1) {
-    bookList += `<div class=book>
-    <h3 class="title">${books[i].title}     
-      </h3>
-      <p class="author">
-      ${books[i].author}</p>
-      <div class="remove"><button onClick="deleteBook(${i})">Remove</button>
-      </div>
+    bookList += `<div>
+    <td>${books[i].title}     
+      </td>
+      <td>
+      ${books[i].author}</td>
+      <td class="remove"><button onClick="deleteBook(${i})">Remove</button>
+      </td>
       <hr>
       <br>
      </div>
@@ -22,17 +22,21 @@ function displayData() {
   document.getElementById('tdBody').innerHTML = bookList;
 }
 
-function add() {
+class book {
+  constructor(title, author) {
+    (this.title = title), (this.author = author);
+  }
+}
+book.addBook = function add() {
   const book = {
     title: bookTitle.value,
     author: bookAuthor.value,
   };
   books.push(book);
   localStorage.setItem('bookLists', JSON.stringify(books));
-}
-
+};
 btnAdd.onclick = () => {
-  add();
+  book.addBook();
   displayData();
 };
 
