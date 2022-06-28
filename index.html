@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Awesome Books</title>
-  </head>
 
-  <body>
-    <div>
-      <h1>Awesome Books</h1>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Awesome Books</title>
+</head>
+
+<body>
+  <div>
+    <h1>Awesome Books</h1>
+  </div>
+  <br />
+  <br />
+  <div id="tdBody"></div>
+  <br />
+  <br />
+  <section id="addBook">
+    <input type="text" id="bookTilte" name="Title" required minlength="3" placeholder="Title" size="50" />
     <br />
     <br />
-    <table class="table">
-      <tbody id="tdBody"></tbody>
-    </table>
+    <input type="text" id="bookAuthor" name="Author" required minlength="3" placeholder="Author" size="50" />
     <br />
     <br />
-    <section id="addBook">
-      <input
-        type="text"
-        id="bookTilte"
-        name="Title"
-        required
-        minlength="3"
-        placeholder="Title"
-        size="50"
-      />
-      <br />
-      <br />
-      <input
-        type="text"
-        id="bookAuthor"
-        name="Author"
-        required
-        minlength="3"
-        placeholder="Author"
-        size="50"
-      />
-      <br />
-      <br />
-      <input type="submit" id="Add" value="Add" />
-    </section>
-  </body>
+    <input type="submit" id="Add" value="Add" />
+  </section>
   <script src="script.js"></script>
+</body>
+
+
 </html>
