@@ -1,15 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Project Awesome books
 
-> Description the project.
-
+> In this project, we build a basic website that allows users to add/remove books from a list, using JavaScript objects and arrays.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- HTML 
+- CSS
 
 ## Live Demo (if available)
 
@@ -18,38 +17,25 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+**To get a local copy up and enter the project's interface as a final product follow these steps.**
+> clone this repository in your local machine
+> make index.html run in a browser
+> all other files for styling and animation are linked to html file.
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Andrea Alvarez**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+- GitHub: [@Alondra87](https://github.com/Alondra87)
+- Twitter: @AndreaA07211436
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/andrea-a-384903224/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+👤 **Karam Fouad**
+
+- GitHub: [@karam084](https://github.com/karam084)
+- Twitter: @ElarabFouad
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
@@ -62,12 +48,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT] licensed.
