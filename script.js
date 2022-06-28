@@ -25,7 +25,8 @@ function displayData() {
 
 class book {
   constructor(title, author) {
-    (this.title = title), (this.author = author);
+    this.title = title;
+    this.author = author;
   }
 }
 book.addBook = function add() {
