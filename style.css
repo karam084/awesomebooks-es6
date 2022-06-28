@@ -1,8 +1,57 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin-left: 40%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px;
+  padding: 25px;
+}
+
+h2 {
+  margin: 20px;
+  padding: 25px;
+}
+
+input {
+  height: 25px;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 25%;
+  background-color: rgb(230, 230, 230);
+  padding: 10px;
+  font-size: 16px;
+}
+
+.book:nth-child(odd) {
+  background-color: grey;
+  color: #fff;
+}
+
+.remove {
+  padding: 5px;
+}
+
+.add {
+  margin-left: 325px;
+  width: 60px;
 }

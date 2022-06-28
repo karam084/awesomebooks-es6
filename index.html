@@ -6,27 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Awesome Books</title>
 </head>
 
 <body>
-  <div>
-    <h1>Awesome Books</h1>
-  </div>
-  <br />
-  <br />
-  <div id="tdBody"></div>
-  <br />
-  <br />
-  <section id="addBook">
-    <input type="text" id="bookTilte" name="Title" required minlength="3" placeholder="Title" size="50" />
-    <br />
-    <br />
-    <input type="text" id="bookAuthor" name="Author" required minlength="3" placeholder="Author" size="50" />
-    <br />
-    <br />
-    <input type="submit" id="Add" value="Add" />
-  </section>
+  <main>
+    <h1>All Awesome Books</h1>
+    <section class="library" id="tdBody"></section>
+
+    <section id="addBook">
+      <h2>Add a new book</h2>
+      <input type="text" id="bookTilte" name="Title" required minlength="3" placeholder="Title" size="50" />
+      <br />
+      <br />
+      <input type="text" id="bookAuthor" name="Author" required minlength="3" placeholder="Author" size="50" />
+      <br />
+      <br />
+      <input type="submit" id="Add" value="Add" class="add" />
+    </section>
+  </main>
   <script src="script.js"></script>
 </body>
 
