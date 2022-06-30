@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Awesome Books</title>
-  </head>
 
-  <body>
-    <nav class="nav-bar">
-      <div class="topnav">
-        <div class="topnav">
-          <a class="active" href="#home">Awesome Books</a>
-          <a href="#list"id="list">List</a>
-          <a href="#addnew"class="addnew"onclick="displayDate()">Add New</a>
-          <a href="#contact"class="contact"onclick="displayDate()">Contact</a>
-        </div> 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>Awesome Books</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h3>Awesome Books</h3>
+      <div class="nav-menu">
+        <a href="#listBook" class="active-tab" id="list">List</a>
+        <a href="#addBook" id="bookform">Add new</a>
+        <a href="#contactBook" id="contact">Contact</a>
     </nav>
-    <p id="demo"></p>
-    <main>       
-      <h1>All Awesome Books</h1>
-      <section class="library hiddBox">
-        <div class="book"id="tdBody"></div>
-      </section>
-      <section id="addBook">
-        <form class="form-control"id="formcontrol">
-          <h2>Add a new book</h2>
-          <input
-            type="text"
-            id="bookTilte"
-            name="Title"
-            required
-            minlength="3"
-            placeholder="Title"
-            size="50"
-          />
-          <br />
-          <br />
-          <input
-            type="text"
-            id="bookAuthor"
-            name="Author"
-            required
-            minlength="3"
-            placeholder="Author"
-            size="50"
-          />
-          <br />
-          <br />
-          <input type="submit" id="Add" value="Add" class="add" />
-        </form>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+    <div class="date" id="date"></div>
+  </header>
+  <main>
+    <h1 id="titleLibrary" class="title hiddenTitle">All Awesome Books</h1>
+    <section class="library hiddelibrary" id="listBook">
+
+    </section>
+    <section id="addBook" class="addBook hiddenAddBook">
+      <h2>Add a new book</h2>
+      <form class="form-control">
+        <input type="text" id="bookTilte" name="Title" required minlength="3" placeholder="Title" size="50" />
+        <br />
+        <br />
+        <input type="text" id="bookAuthor" name="Author" required minlength="3" placeholder="Author" size="50" />
+        <br />
+        <br />
+        <input type="submit" id="Add" value="Add" class="add" />
+      </form>
+    </section>
+    <section id="contactBook" class="contactBook hiddenContactBook" aria-label="section">
+      <h1 class="title">Contact information</h1>
+      <div class="contact-text"></div>
+      <p>Do you have any questions or you just want to say "Hello"?</p>
+      <p>You can reach out to us!</p>
+      <ul class="contact-list">
+        <li>Our e-mail: mail@mail.com</li>
+        <li>Our phone number: 00435866534422</li>
+        <li>Our address Streetname 22, 84503 City, Country</li>
+      </ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

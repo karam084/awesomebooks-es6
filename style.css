@@ -21,6 +21,7 @@ main {
 h1 {
   margin: 20px;
   padding: 25px;
+
 }
 
 h2 {
@@ -56,33 +57,41 @@ input {
   width: 60px;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: black;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: black;
-  color: #ddd;
-}
-
-.topnav a.active {
-  color: white;
-}
-
-#list {
-  margin-left: 55%;
-}
-
-.hiddBox {
+.hiddenTitle {
   display: none;
+}
+
+.title {
+  display: block;
+}
+
+
+
+
+.hiddelibrary {
+  display: none;
+}
+
+.library {
+  display: block;
+}
+
+
+
+.hiddenAddBook {
+  display: none;
+}
+
+.addBook {
+  display: block;
+}
+
+
+
+.hiddenContactBook {
+  display: none;
+}
+
+.contactBook {
+  display: block;
 }
