@@ -128,3 +128,10 @@ a:hover {
   flex-direction: row-reverse;
   padding: 15px;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin: 2%;
+  font-weight: 600;
+}
