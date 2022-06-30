@@ -34,22 +34,25 @@ class Book {
     };
     books.push(book);
     localStorage.setItem('bookLists', JSON.stringify(books));
+    return this.book;
   }
 
   deleteBook(index) {
     books.splice(index, 1);
     localStorage.setItem('bookLists', JSON.stringify(books));
     displayData();
+    return this.book;
   }
 
   clearForm() {
-    for (let i = 0; i < formControl.length; i++) {
+    for (let i = 0; i < formControl.length; i += 1) {
       formControl[i].value = '';
     }
+    return this.book;
   }
 }
 
-btnAdd.addEventListener('click', function () {
+btnAdd.addEventListener('click', () => {
   const addBook = new Book('title', 'author');
   addBook.add();
   displayData();
