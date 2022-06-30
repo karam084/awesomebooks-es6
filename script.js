@@ -1,9 +1,8 @@
 const bookTitle = document.getElementById('bookTilte');
 const bookAuthor = document.getElementById('bookAuthor');
 const btnAdd = document.getElementById('Add');
-
+const formControl = document.getElementsByClassName('form-control');
 let books = [];
-
 function displayData() {
   let bookList = '';
   for (let i = 0; i < books.length; i += 1) {
@@ -22,35 +21,51 @@ function displayData() {
   }
   document.getElementById('tdBody').innerHTML = bookList;
 }
-
-class book {
+class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
-}
-book.addBook = function add() {
-  const book = {
-    title: bookTitle.value,
-    author: bookAuthor.value,
-  };
-  books.push(book);
-  localStorage.setItem('bookLists', JSON.stringify(books));
-};
-btnAdd.onclick = () => {
-  book.addBook();
-  displayData();
-};
 
-function deleteBook(index) {
-  books.splice(index, 1);
-  localStorage.setItem('bookLists', JSON.stringify(books));
-  displayData();
+  add() {
+    const book = {
+      title: bookTitle.value,
+      author: bookAuthor.value,
+    };
+    books.push(book);
+    localStorage.setItem('bookLists', JSON.stringify(books));
+  }
+
+  deleteBook(index) {
+    books.splice(index, 1);
+    localStorage.setItem('bookLists', JSON.stringify(books));
+    displayData();
+  }
+
+  clearForm() {
+    for (let i = 0; i < formControl.length; i++) {
+      formControl[i].value = '';
+    }
+  }
 }
 
+btnAdd.addEventListener('click', function () {
+  const addBook = new Book('title', 'author');
+  addBook.add();
+  displayData();
+});
+function deleteBook() {
+  const dBook = new Book();
+  dBook.deleteBook();
+}
 if (JSON.parse(localStorage.getItem('bookLists')) != null) {
   books = JSON.parse(localStorage.getItem('bookLists'));
   displayData();
 } else {
   deleteBook();
 }
+function clearForm() {
+  const clearForms = new Book();
+  clearForms.clearForm();
+}
+clearForm();
