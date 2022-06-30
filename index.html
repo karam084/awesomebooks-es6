@@ -15,12 +15,24 @@
   </head>
 
   <body>
-    <main>
+    <nav class="nav-bar">
+      <div class="topnav">
+        <div class="topnav">
+          <a class="active" href="#home">Awesome Books</a>
+          <a href="#list"id="list">List</a>
+          <a href="#addnew"class="addnew"onclick="displayDate()">Add New</a>
+          <a href="#contact"class="contact"onclick="displayDate()">Contact</a>
+        </div> 
+    </nav>
+    <p id="demo"></p>
+    <main>       
       <h1>All Awesome Books</h1>
-      <section class="library" id="tdBody"></section>
+      <section class="library hiddBox">
+        <div class="book"id="tdBody"></div>
+      </section>
       <section id="addBook">
-        <h2>Add a new book</h2>
-        <form class="form-control">
+        <form class="form-control"id="formcontrol">
+          <h2>Add a new book</h2>
           <input
             type="text"
             id="bookTilte"

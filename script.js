@@ -1,7 +1,14 @@
+'use strict';
 const bookTitle = document.getElementById('bookTilte');
 const bookAuthor = document.getElementById('bookAuthor');
 const btnAdd = document.getElementById('Add');
 const formControl = document.getElementsByClassName('form-control');
+const list = document.getElementById('list');
+const formid = document.getElementById('formcontrol');
+const bookList = document.getElementById('tdBody');
+const bookap = document.getElementById('bookApear');
+const hiddBox = document.getElementsByClassName('hiddBox');
+
 let books = [];
 function displayData() {
   let bookList = '';
@@ -48,6 +55,7 @@ class Book {
     for (let i = 0; i < formControl.length; i += 1) {
       formControl[i].value = '';
     }
+    //bookLists;
     return this.book;
   }
 }
@@ -72,3 +80,8 @@ function clearForm() {
   clearForms.clearForm();
 }
 clearForm();
+
+list.addEventListener('click', () => {
+  hiddBox.style.display = 'flex';
+  //formid.style.display = 'none';
+});
