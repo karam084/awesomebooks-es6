@@ -76,33 +76,37 @@ function clearForm() {
 }
 clearForm();
 
+function displayDate() {
+  document.getElementById('date').innerHTML = Date();
+}
 
-document.getElementById("list").onclick = displayList;
+displayDate();
+
+displayData();
 
 function displayList() {
-  document.getElementById("titleLibrary").className = "title"
-  document.getElementById("listBook").className = "library";
-  document.getElementById("contactBook").className = "hiddenContactBook";
-  document.getElementById("addBook").className = "hiddenAddBook";
+  document.getElementById('titleLibrary').className = 'title';
+  document.getElementById('listBook').className = 'library';
+  document.getElementById('contactBook').className = 'hiddenContactBook';
+  document.getElementById('addBook').className = 'hiddenAddBook';
 }
 
-document.getElementById("bookform").onclick = displayBookForm;
+document.getElementById('list').onclick = displayList;
 
 function displayBookForm() {
-  document.getElementById("titleLibrary").className = "hiddenTitle"
-  document.getElementById("listBook").className = "hiddelibrary ";
-  document.getElementById("contactBook").className = "hiddenContactBook";
-  document.getElementById("addBook").className = "addBook";
+  document.getElementById('titleLibrary').className = 'hiddenTitle';
+  document.getElementById('listBook').className = 'hiddelibrary ';
+  document.getElementById('contactBook').className = 'hiddenContactBook';
+  document.getElementById('addBook').className = 'addBook';
 }
 
-document.getElementById("contact").onclick = displayContact;
+document.getElementById('bookform').onclick = displayBookForm;
 
 function displayContact() {
-  document.getElementById("titleLibrary").className = "hiddenTitle"
-  document.getElementById("listBook").className = "hiddelibrary ";
-  document.getElementById("contactBook").className = "contactBook";
-  document.getElementById("addBook").className = "hiddenAddBook";
+  document.getElementById('titleLibrary').className = 'hiddenTitle';
+  document.getElementById('listBook').className = 'hiddelibrary ';
+  document.getElementById('contactBook').className = 'contactBook';
+  document.getElementById('addBook').className = 'hiddenAddBook';
 }
 
-
-
+document.getElementById('contact').onclick = displayContact;

@@ -21,7 +21,6 @@ main {
 h1 {
   margin: 20px;
   padding: 25px;
-
 }
 
 h2 {
@@ -30,7 +29,7 @@ h2 {
 }
 
 input {
-  height: 25px;
+  height: 30px;
 }
 
 .book {
@@ -50,11 +49,17 @@ input {
 
 .remove {
   padding: 5px;
+  background-color: #ff7851;
+  color: #f6f6f6;
+  border: none;
 }
 
 .add {
   margin-left: 325px;
   width: 60px;
+  background-color: #56cc9d;
+  color: #f6f6f6;
+  border: none;
 }
 
 .hiddenTitle {
@@ -65,9 +70,6 @@ input {
   display: block;
 }
 
-
-
-
 .hiddelibrary {
   display: none;
 }
@@ -76,22 +78,53 @@ input {
   display: block;
 }
 
-
+.addBook {
+  display: block;
+}
 
 .hiddenAddBook {
   display: none;
 }
 
-.addBook {
-  display: block;
+.contactBook {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 40%;
 }
 
-
+.contact-list {
+  margin: 10px;
+  padding: 10px;
+}
 
 .hiddenContactBook {
   display: none;
 }
 
-.contactBook {
-  display: block;
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #272a32;
+  color: #fff;
+  padding: 2%;
+}
+
+.tabs a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+a:hover {
+  color: #56cc9d;
+}
+
+.date {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 15px;
 }
