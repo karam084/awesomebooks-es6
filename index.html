@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Awesome Books</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <title>Awesome Books</title>
-</head>
-
-<body>
-  <header>
-    <nav class="nav-menu">
-      <h3 class="logo">Awesome Books</h3>
-      <div class="tabs">
-        <a href="#listBook" id="list">List</a>
-        <a href="#addBook" id="bookform">Add new</a>
-        <a href="#contactBook" id="contact">Contact</a>
-      </div>
-    </nav>
-    <div class="date" id="date"></div>
-  </header>
-  <main>
-    <h1 id="titleLibrary" class="title hiddenTitle">All Awesome Books</h1>
-    <section class="library hiddelibrary" id="listBook">
-
-    </section>
-    <section id="addBook" class="addBook hiddenAddBook">
-      <h2>Add a new book</h2>
-      <form class="form-control">
-        <input type="text" id="bookTilte" name="Title" required minlength="3" placeholder="Title" size="50" />
-        <br />
-        <br />
-        <input type="text" id="bookAuthor" name="Author" required minlength="3" placeholder="Author" size="50" />
-        <br />
-        <br />
-        <input type="submit" id="Add" value="Add" class="add" />
-      </form>
-    </section>
-    <section id="contactBook" class="contactBook hiddenContactBook" aria-label="section">
-      <h1 class="title">Contact information</h1>
-      <div class="contact-text"></div>
-      <p>Do you have any questions or you just want to say "Hello"?</p>
-      <p>You can reach out to us!</p>
-      <ul class="contact-list">
-        <li><b>Our e-mail:</b> mail@mail.com</li>
-        <li><b>Our phone number:</b> 00435866534422</li>
-        <li><b>Our address:</b> Streetname 22, 84503 City, Country</li>
-      </ul>
-    </section>
-  </main>
-  <footer class="footer">
-    <p class="footer__copyright">&copy; 2022 Awesome Books. All Rights Reserved.</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+  <body>
+    <header>
+      <nav class="nav-menu">
+        <h3 class="logo">Awesome Books</h3>
+        <div class="tabs">
+          <a href="#listBook" id="list">List</a>
+          <a href="#addBook" id="bookform">Add new</a>
+          <a href="#contactBook" id="contact">Contact</a>
+        </div>
+      </nav>
+      <div class="date" id="date"></div>
+    </header>
+    <main>
+      <h1 id="titleLibrary" class="title hiddenTitle">All Awesome Books</h1>
+      <section class="library hiddelibrary" id="listBook"></section>
+      <section id="addBook" class="addBook hiddenAddBook">
+        <h2>Add a new book</h2>
+        <form class="form-control">
+          <input
+            type="text"
+            id="bookTilte"
+            name="Title"
+            required
+            minlength="3"
+            placeholder="Title"
+            size="50"
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            id="bookAuthor"
+            name="Author"
+            required
+            minlength="3"
+            placeholder="Author"
+            size="50"
+          />
+          <br />
+          <br />
+          <input type="submit" id="Add" value="Add" class="add" />
+        </form>
+      </section>
+      <section
+        id="contactBook"
+        class="contactBook hiddenContactBook"
+        aria-label="section"
+      >
+        <h1 class="title">Contact information</h1>
+        <div class="contact-text"></div>
+        <p>Do you have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul class="contact-list">
+          <li><b>Our e-mail:</b> mail@mail.com</li>
+          <li><b>Our phone number:</b> 00435866534422</li>
+          <li><b>Our address:</b> Streetname 22, 84503 City, Country</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; 2022 Awesome Books. All Rights Reserved.
+      </p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
 </html>
