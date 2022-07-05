@@ -82,8 +82,6 @@ function displayDate() {
 
 displayDate();
 
-displayData();
-
 function displayList() {
   document.getElementById('titleLibrary').className = 'title';
   document.getElementById('listBook').className = 'library';
@@ -110,3 +108,9 @@ function displayContact() {
 }
 
 document.getElementById('contact').onclick = displayContact;
+
+if (typeof window !== 'undefined') {
+  console.log('You are on the browser');
+} else {
+  console.log('You are on the server');
+}
