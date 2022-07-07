@@ -1,64 +1,21 @@
-const bookTitle = document.getElementById('bookTilte');
-const bookAuthor = document.getElementById('bookAuthor');
-const btnAdd = document.getElementById('Add');
-const formControl = document.getElementsByClassName('form-control');
-let books = [];
-function displayData() {
-  let bookList = '';
-  for (let i = 0; i < books.length; i += 1) {
-    bookList += `<div class="book">
-   <div>
-    <td>${books[i].title}     
-      </td>
-      <td> by </td>
-      <td>
-      ${books[i].author}</td></div>
-      <div>
-      <td><button onClick="deleteBook(${i})" class="remove">Remove</button>
-      </td></div>
-     </div>
-     `;
-  }
-  document.getElementById('listBook').innerHTML = bookList;
-}
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-
-  add() {
-    const book = {
-      title: bookTitle.value,
-      author: bookAuthor.value,
-    };
-    books.push(book);
-    localStorage.setItem('bookLists', JSON.stringify(books));
-    return this.book;
-  }
-
-  deleteBook(index) {
-    books.splice(index, 1);
-    localStorage.setItem('bookLists', JSON.stringify(books));
-    displayData();
-    return this.book;
-  }
-
-  clearForm() {
-    for (let i = 0; i < formControl.length; i += 1) {
-      formControl[i].value = '';
-    }
-    return this.book;
-  }
-}
-
+import { displayData } from './modules/displayData.js';
+import { DateTime } from './luxon.js';
+import { Book } from './modules/Book.js';
+export const bookTitle = document.getElementById('bookTilte');
+export const bookAuthor = document.getElementById('bookAuthor');
+export const btnAdd = document.getElementById('Add');
+export const formControl = document.getElementsByClassName('form-control');
+const dateElem = document.getElementById('date');
+const removeBooks = document.getElementById('removeBook');
+export let books = [];
 btnAdd.addEventListener('click', () => {
   const addBook = new Book('title', 'author');
   addBook.add();
   displayData();
 });
+
 function deleteBook() {
-  const dBook = new Book();
+  const dBook = new Book('title', 'author');
   dBook.deleteBook();
 }
 if (JSON.parse(localStorage.getItem('bookLists')) != null) {
@@ -81,9 +38,6 @@ function displayDate() {
 }
 
 displayDate();
-
-displayData();
-
 function displayList() {
   document.getElementById('titleLibrary').className = 'title';
   document.getElementById('listBook').className = 'library';
@@ -110,3 +64,8 @@ function displayContact() {
 }
 
 document.getElementById('contact').onclick = displayContact;
+
+DateTime.innerText = new Date();
+setInterval(() => {
+  dateElem.innerText = new Date();
+}, 1000);
