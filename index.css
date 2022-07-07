@@ -135,3 +135,9 @@ a:hover {
   margin: 2%;
   font-weight: 600;
 }
+
+.datexon {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 15px;
+}
